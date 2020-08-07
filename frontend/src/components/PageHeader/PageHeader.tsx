@@ -5,10 +5,11 @@ import backIcon from '../../assets/images/icons/back.svg'
 import './header.css'
 
 interface PageHeaderProps {
-    title?: string,
+    title: string,
+    description?: string,
 }
 
-const PageHeader:React.FunctionComponent<PageHeaderProps> = ({title, children}) => {
+const PageHeader:React.FunctionComponent<PageHeaderProps> = ({title, description, children}) => {
   return (
     <header className="page-header">
       <div className="top-bar-container">
@@ -22,7 +23,9 @@ const PageHeader:React.FunctionComponent<PageHeaderProps> = ({title, children}) 
 
       <div className="header-content">
         <strong>{title}</strong>
-        {children}
+         {description && <p>{description}</p>}
+
+          {children}
       </div>
 
     </header>
