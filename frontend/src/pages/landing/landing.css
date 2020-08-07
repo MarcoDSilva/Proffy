@@ -1,0 +1,169 @@
+#page-landing {
+    width:100vw;
+    height:100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-text-in-primary);
+    background: var(--color-primary);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo-container img{
+    height: 8rem;
+}
+
+.logo-container h2 {
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 4.2rem;
+    margin-top:0.75rem;
+}
+
+.hero-img {
+    width:100%
+}
+
+.btn-container {
+    display:flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.btn-container a {
+    width: 30rem;
+    height: 10.2rem;
+    border-radius: 0.7rem;
+    margin-right:1.5rem;
+    font: 700 2rem Archivo;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--color-button-text);
+
+    transition: background-color 0.3s
+}
+
+.btn-container a:first-child {
+    margin-right: 1.6rem;
+}
+
+.btn-container a img {
+    width:4rem;
+    margin-right:2.4rem;
+}
+
+.btn-container a.study {
+    background: var(--color-primary-lighter)
+}
+
+.btn-container a.study:hover{
+    background: var(--color-primary-dark)
+}
+
+.btn-container a.give-classes{
+    background: var(--color-secondary)
+}
+
+.btn-container a.give-classes:hover{
+    background: var(--color-secondary-dark)
+}
+
+.total-connections {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size:1.76rem;
+}
+
+.total-conections img {
+    margin-left:0.8rem;
+}
+
+@media(min-width:375px) {
+    .logo-container img{
+        height: 6.8rem;
+    }
+
+    .hero-img {
+        width:95%;
+    }    
+}
+
+@media(min-width:600px) {
+    .logo-container img{
+        height: 8rem;
+    }
+
+    .hero-img {
+        width:85%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }    
+}
+
+@media(min-width:700px) {
+    .logo-container img{
+        height: 7rem;
+    }
+
+    .hero-img {
+        width:75%;
+    }    
+}
+
+@media(min-width:1100px) {
+    #page-landing-content{
+        max-width: 1100px;
+        display:grid;
+        grid-template-rows: 350px 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas: "logo hero hero" "btn btn cons" ;        
+    }
+
+    .logo-container {
+        grid-area:logo;
+        align-self: center;
+        text-align: left;
+        margin: 0;
+    }
+
+    .logo-container h2 {
+        text-align: initial;
+        font-size: 3.4rem;
+    }
+
+    .logo-container img{
+        height:100%;
+    }
+
+    .btn-container{
+        grid-area:btn;
+        justify-content: flex-start;
+    }
+
+    .btn-container a {
+        font-size: 2.4rem;
+    }
+
+    .hero-img {
+        grid-area: hero;
+        justify-self:end;
+    }
+
+    .total-connections {
+        grid-area:cons;
+        justify-self:end;
+        font-size:1.6rem;
+    }
+}
