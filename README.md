@@ -1,12 +1,14 @@
 # Proffy
 React project made in next level week, which purpose of this project is to connect teachers and students.
 
+Front end with React/React Native and backend with Node/Express/Sqlite
+
 ___
 
-Project goals is to learn more about:
+Project goals was to learn more about:
 
 ```
-ReactJS
+ReactJS / ReactNative
 Typescript
 Node (Expo/Express)
 FullStack development
