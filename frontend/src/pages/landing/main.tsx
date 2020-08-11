@@ -12,11 +12,11 @@ const Landing = () => {
     <div id="page-landing">
       <section id="page-landing-content" className="container">
         <div className="logo-container">
-          <img src={logo} alt="Proffy logo" />
+          <img src={logo} alt="logo"/>
           <h2>Your online studies platform</h2>
         </div>
 
-        <img src={landingImg} alt="landing image" className="hero-img" />
+        <img src={landingImg} alt="" className="hero-img" />
 
         <section className="btn-container">
           <Link to="study" className="study">
