@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from "react";
+import {useHistory} from "react-router-dom"
 import PageHeader from "../../components/PageHeader/PageHeader";
 import "./teacherForm.css";
 import Input from "../../components/Input/Input";
@@ -19,6 +20,8 @@ const TeacherForm = () => {
   const [bio, setBio] = useState("");
   const [subject, setSubject] = useState({});
   const [price, setPrice] = useState("");
+
+  const history = useHistory();
 
   // adds a new schedule item : TODO FIX - maybe use an id for the key to render
   const addNewSchedule = () => {
@@ -42,16 +45,7 @@ const TeacherForm = () => {
     setScheduleItems(updatedValues);
   };
 
-  const clearForms = () => {
-    setName("");
-    setAvatar("");
-    setWhatsApp("");
-    setBio("");
-    setSubject("");
-    setPrice("");
-    setScheduleItems([]);
-  };
-
+  // 
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
 
@@ -66,7 +60,7 @@ const TeacherForm = () => {
     })
       .then(() => {
         alert("Registration complete!");
-        clearForms();
+        history.push('/')
       })
       .catch(() => {
         console.log("error while inserting data");
