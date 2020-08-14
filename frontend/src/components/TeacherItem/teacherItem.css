@@ -57,7 +57,7 @@
     color: var(--color-primary)
 }
 
-.teacher-item footer button{
+.teacher-item footer a{
     width: 16rem;
     height:5.3rem;
     background: var(--color-secondary); 
@@ -72,7 +72,7 @@
     transition: 0.2s;
 }
 
-.teacher-item footer button:hover{
+.teacher-item footer a:hover{
     background: var(--color-secondary-dark); 
 }
 
